@@ -31,13 +31,19 @@
 				span:hover img { height: 370px; width: 370px; position: absolute; border: 2px solid black;}
 				h2 {display: block; clear: both;}
 	</style>
+
+	<script type="text/javascript">
+		function gotolang(name) {
+			location.href = location.href.substring(0, location.href.length) + name
+		}
+	</script>
 </head>
 <body dir="ltr" vlink="#800000" link="#000080" lang="it-IT">
 	<div class="container">
     	<div class="align-right">Milano, 2021, 6 giugno</div>
         <div class="align-left">
-        	<a href="https://alex-dp.github.io/livingfreely/en">&#x1f1ec;&#x1f1e7; English</a> | 
-            <a href="https://alex-dp.github.io/livingfreely/it">&#x1f1ee;&#x1f1f9; italiano</a> | 
+        	<a onclick="gotolang('en')">&#x1f1ec;&#x1f1e7; English</a> | 
+            <a onclick="gotolang('it')">&#x1f1ee;&#x1f1f9; italiano</a> | 
             <a href="https://github.com/alex-dp/livingfreely">contribute your own translation on github</a>
             <span>
             	<br>
