@@ -31,13 +31,15 @@
 	<script type="text/javascript">
 		function fixlinks() {
 
-			var home = location.href.substring(0, location.href.lastIndexOf("/") + 1);
+			var home = location.href.substring(0, location.href.lastIndexOf("/") - 2);
 			for(var i = 0, l=document.links.length; i<l; i++) {
-			  var str = document.links[i].href
+				if(document.links[i].href.includes("github.io")) {
+				  var str = document.links[i].href
 
-				var last = str.substring(str.lastIndexOf("/") + 1, str.length)
+					var last = str.substring(str.lastIndexOf("/") + 1, str.length)
 
-				document.links[i].href = home + last
+					document.links[i].href = home + last
+				}
 			}
 		}
 	</script>
@@ -53,7 +55,7 @@
             	<br>
 	            ETH address: 0x1798B8530Be2e615Cfe6b802A8db0C769c2bb677
 	            <br>
-	            <img src="https://alex-dp.github.io/livingfreely/eth.png"/>
+	            <img src="https://api.qrserver.com/v1/create-qr-code/?data=0x1798B8530Be2e615Cfe6b802A8db0C769c2bb677&amp;size=370x370&amp;margin=20"/>
 	          </span>
         </div>
     </div>
