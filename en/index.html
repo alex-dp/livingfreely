@@ -6,26 +6,23 @@
 	<meta name="created" content="2021-06-06T22:15:52.576285427">
 	<meta name="changed" content="2021-06-07T18:28:24.146079580">
 	<style type="text/css">
-    @font-face {
-      font-family: dvs;
-      src: url(https://alex-dp.github.io/livingfreely/dvs.ttf);
-    }
     *{font-family: dvs}
-    	@media (min-aspect-ratio: 1){
+		@media (min-aspect-ratio: 1){
 			body {margin-left: 20%; margin-right:20%; margin-top:5%: margin-bottom:5%}
-        }
+    }
         
-        @media (max-aspect-ratio: 1){
+    @media (max-aspect-ratio: 1){
 			body {margin-left: 10%; margin-right:10%; margin-top:5%: margin-bottom:5%}
-        }
-        p { margin-bottom: 0.1in; line-height: 115%; background: transparent; text-align:justify }
-        .container{ width:100%; }
-        .align-left{ float: left;width:50%; text-align:left}
-        .align-right{ float: right;width:50%; text-align:right}
-        .quote{margin-left: 5%; margin-right: 5%; line-height:150%; color: #222; text-align:justify; font-style: italic;}
-        span img { height: 0; width: 0; transition: all .2s ease-in-out; position: absolute;}
-				span:hover img { height: 370px; width: 370px; position: absolute; border: 2px solid black;}
-				h2 {display: block; clear: both;}
+    }
+    
+    p { margin-bottom: 0.1in; line-height: 115%; background: transparent; text-align:justify }
+    .container{ width:100%; }
+    .align-left{ float: left;width:50%; text-align:left}
+    .align-right{ float: right;width:50%; text-align:right}
+    .quote{margin-left: 5%; margin-right: 5%; line-height:150%; color: #222; text-align:justify; font-style: italic;}
+    span img { height: 0; width: 0; transition: all .2s ease-in-out; position: absolute;}
+		span:hover img { height: 370px; width: 370px; position: absolute; border: 2px solid black;}
+		h2 {display: block; clear: both;}
 	</style>
 
 	<script type="text/javascript">
@@ -40,6 +37,10 @@
 
 					document.links[i].href = home + last
 				}
+
+				var newStyle = document.createElement('style');
+				newStyle.appendChild(document.createTextNode("@font-face {font-family: dvs; src: url('" + home + "dvs.ttf');}"));
+				document.head.appendChild(newStyle);
 			}
 		}
 	</script>
