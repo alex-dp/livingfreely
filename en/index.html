@@ -27,8 +27,22 @@
 				span:hover img { height: 370px; width: 370px; position: absolute; border: 2px solid black;}
 				h2 {display: block; clear: both;}
 	</style>
+
+	<script type="text/javascript">
+		function fixlinks() {
+
+			var home = location.href.substring(0, location.href.lastIndexOf("/") + 1);
+			for(var i = 0, l=document.links.length; i<l; i++) {
+			  var str = document.links[i].href
+
+				var last = str.substring(str.lastIndexOf("/") + 1, str.length)
+
+				document.links[i].href = home + last
+			}
+		}
+	</script>
 </head>
-<body dir="ltr" vlink="#800000" link="#000080" lang="en-US">
+<body dir="ltr" vlink="#800000" link="#000080" lang="en-US" onload="fixlinks()">
 	<div class="container">
     	<div class="align-right">Milano, 2021, June 6th</div>
         <div class="align-left">
