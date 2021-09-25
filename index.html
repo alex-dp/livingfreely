@@ -5,7 +5,11 @@
 <body>
 <p>Redirecting...</p>
 <script>
-window.location.href += "/en";
+	var userLang = (navigator.language || navigator.userLanguage).substr(0,2)
+	if (['it', 'en'].includes(userLang))
+		window.location.href += "/" + userLang;
+	else
+		window.location.href += "/en"
 </script>
 </body>
 </html>
