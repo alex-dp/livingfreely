@@ -26,6 +26,36 @@
         }
     }
 
+    @media (prefers-color-scheme: light) {
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        .quote {
+            color: #222;
+        }
+    }
+    
+    @media (prefers-color-scheme: dark) {
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .quote {
+            color: #ccc;
+        }
+
+        a {
+            color: lightblue;
+        }
+
+        a:visited {
+            color: pink;
+        }
+    }
+
     p {
         margin-bottom: 0.1in;
         line-height: 115%;
